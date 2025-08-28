@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+.nav hr {
+    width: 0%;
+    margin: 0 auto;
+}
+
+.nav:hover hr {
+    animation-name: expand;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.logo:hover {
+    animation-name: move;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expand {
+    from { width: 0%; }
+    to { width: 100%; }
+}

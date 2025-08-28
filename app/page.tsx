@@ -1,9 +1,10 @@
+import Img from 'next/image';
+import NavBar from './components/NavBar';
+
 export default function Page() {
   return (
-    <>
-      <nav className="">
-        <div className="absolute justify-center">sdsfs</div>
-      </nav>
-    </>
+    <div className='bg-gray-950 min-h-screen'>
+      <NavBar />
+    </div>
   )
 }
