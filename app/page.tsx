@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 
 export default function Page() {
   return (
-    <div className='bg-gray-950 min-h-screen'>
+    <div className='bg-[#F5F7F8] min-h-screen'>
       <NavBar />
     </div>
   )
