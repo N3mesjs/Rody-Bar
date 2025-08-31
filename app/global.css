@@ -21,3 +21,25 @@
     box-shadow: 0px 5px black;
 }
 
+.colonne-img {
+    width: min(1000px, 100%);
+    columns: 3 300px;
+    margin: 0 auto;
+    column-gap: 1em;
+}
+
+.colonne-img img {
+    display: block;
+    width: 100%;
+    margin-bottom:1em;
+    border-radius: 8px;
+}
+
+.button-anim:hover {
+    animation: raise 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes raise {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10%); }
+}
