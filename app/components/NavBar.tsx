@@ -2,12 +2,17 @@ import Img from 'next/image';
 import React from 'react';
 
 interface NavBarProps {
-    ref: React.RefObject<null | HTMLDivElement>;
+    eventRef?: React.RefObject<null | HTMLDivElement>;
+    menuRef?: React.RefObject<null | HTMLDivElement>;
 }
 
 export default function NavBar(props: NavBarProps) {
     const scrollToAbout = () => {
-        props.ref.current?.scrollIntoView();
+        props.eventRef.current?.scrollIntoView();
+    };
+
+    const scrollToMenu = () => {
+        props.menuRef.current?.scrollIntoView();
     };
 
     return (
@@ -25,9 +30,9 @@ export default function NavBar(props: NavBarProps) {
                     <hr />
                 </div>
                 <div className='nav-element'>
-                    <a href="">
-                        Menu
-                    </a>
+                    <button onClick={scrollToMenu} className="focus:outline-none">
+                         Menu
+                    </button>
                     <hr />
                 </div>
             </div>

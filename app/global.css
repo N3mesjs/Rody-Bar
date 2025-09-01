@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+    font-family: Poppins, 'Segoe UI', sans-serif;
+}
+
 .nav-element hr {
     width: 0%;
     margin: 0 auto;
