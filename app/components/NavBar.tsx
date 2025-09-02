@@ -8,11 +8,11 @@ interface NavBarProps {
 
 export default function NavBar(props: NavBarProps) {
     const scrollToAbout = () => {
-        props.eventRef.current?.scrollIntoView();
+        props.eventRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const scrollToMenu = () => {
-        props.menuRef.current?.scrollIntoView();
+        props.menuRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
