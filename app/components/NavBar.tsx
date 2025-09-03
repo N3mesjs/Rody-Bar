@@ -17,6 +17,9 @@ export default function NavBar(props: NavBarProps) {
 
     return (
         <nav className="flex sticky top-0 justify-between items-center p-5 text-white bg-[#F4CE14] z-20">
+
+            <button className='border-2'></button>
+
             <Img src="/logo.jpeg" alt="Logo" width={70} height={70} />
             <div className='flex items-center justify-center gap-[3em] text-xl'>
                 <div>
