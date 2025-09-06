@@ -38,7 +38,7 @@ export default function Page() {
   }
 
   return (
-    <div className='bg-[#F5F7F8] min-h-screen' style={{overflow: navState ? 'hidden' : 'scroll', height: navState ? '100vh' : '100%' }}>
+    <div className='bg-background min-h-screen' style={{overflow: navState ? 'hidden' : 'scroll', height: navState ? '100vh' : '100%' }}>
 
       <NavBar eventRef={eventRef} menuRef={menuRef} navState={navState} navSetState={navSetState} />
 
@@ -48,7 +48,7 @@ export default function Page() {
             <h1 className='text-4xl font-bold text-center'>Benvenuti al <u>Rody Bar!</u></h1>
             <div className='w-1/2 text-center mt-5 flex flex-col justify-center items-center'>
               <p>Un luogo dove ogni sorriso vale più di mille brindisi. Qui non sei cliente, sei di casa.</p>
-              <button onClick={scrollToMenu} className='mt-5 px-4 py-3 bg-[#495E57] rounded-2xl text-white shadow flex items-center button-anim'>Scopri cosa abbiamo da offrire<Img src="/arrow.png" alt="freccia" width={24} height={24} /></button>
+              <button onClick={scrollToMenu} className='mt-5 px-4 py-3 bg-oliveGreen rounded-2xl text-white shadow flex items-center button-anim'>Scopri cosa abbiamo da offrire<Img src="/arrow.png" alt="freccia" width={24} height={24} /></button>
             </div>
           </div>
           <div className='w-full md:w-1/2 p-5 flex justify-center items-center'>
@@ -99,7 +99,7 @@ export default function Page() {
         </div>
 
         {/* Colazione #F5F7F8*/}
-        <div ref={breakRef} className='bg-[#495E57] text-white p-[7em]'>
+        <div ref={breakRef} className='bg-oliveGreen text-white p-[7em]'>
           <div className='colonne text-2xl'>
             <div className='flex justify-center items-center flex-col gap-[1.5em]'>
               <div>
@@ -200,7 +200,7 @@ export default function Page() {
         </div>
 
         {/* CockTails #F5F7F8*/}
-        <div ref={cocktailRef} className='bg-[#F5F7F8] text-black p-[7em]'>
+        <div ref={cocktailRef} className='bg-background text-black p-[7em]'>
           <div className='colonne text-2xl'>
             <div className='flex flex-col justify-center items-center gap-[1.5em]'>
               <div>
@@ -258,7 +258,7 @@ export default function Page() {
         </div>
 
         {/* Bibite #F5F7F8*/}
-        <div ref={drinksRef} className='bg-[#495E57] text-white p-[7em]'>
+        <div ref={drinksRef} className='bg-oliveGreen text-white p-[7em]'>
           <div className='colonne text-2xl'>
             <div className='flex flex-col justify-center items-center gap-[1.5em]'>
               <div>
@@ -347,7 +347,7 @@ export default function Page() {
         </div>
 
         {/* Gelati #F5F7F8*/}
-        <div ref={iceCreamRef} className='bg-[#F5F7F8] text-black p-[7em]'>
+        <div ref={iceCreamRef} className='bg-background text-black p-[7em]'>
           <div className='colonne text-2xl'>
             <div className='flex flex-col justify-center items-center gap-[1.5em]'>
               <div>

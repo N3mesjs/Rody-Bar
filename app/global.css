@@ -9,6 +9,12 @@
     padding: 0;
 }
 
+@theme {
+    --color-background: #F5F7F8;
+    --color-oliveGreen: #495E57;
+    --color-giallo: #F4CE14;
+}
+
 .nav-element hr {
     width: 0%;
     margin: 0 auto;
@@ -73,5 +79,19 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+}
+
+
+.nav-comparsa {
+    animation: navApertura 0.2s ease-out
+}
+
+@keyframes navApertura {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
     }
 }
