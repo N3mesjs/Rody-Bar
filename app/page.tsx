@@ -12,6 +12,7 @@ import gelato from '../public/gelato.png'
 export default function Page() {
   const eventRef = useRef<null | HTMLDivElement>(null);
   const menuRef = useRef<null | HTMLDivElement>(null);
+  const navBarRef = useRef<null | HTMLDivElement>(null);
 
   const breakRef = useRef<null | HTMLDivElement>(null);
   const cocktailRef = useRef<null | HTMLDivElement>(null);
@@ -37,12 +38,32 @@ export default function Page() {
     menuRef.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
+  useEffect(() => {
+    if (navState === false) return;
+
+    const handleClick = (e: MouseEvent) => {
+      if (navBarRef.current && !navBarRef.current.contains(e.target as Node) ) {
+        navSetState(false);
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [navState]);
+
+  useEffect(() => {
+    console.log("navOpen has changed:", navState);
+  }, [navState]);
+
   return (
-    <div className='bg-background min-h-screen' style={{overflow: navState ? 'hidden' : 'scroll', height: navState ? '100vh' : '100%' }}>
+    <div className='bg-background min-h-screen' style={{ overflow: navState ? 'hidden' : 'scroll', height: navState ? '100vh' : '100%' }}>
 
-      <NavBar eventRef={eventRef} menuRef={menuRef} navState={navState} navSetState={navSetState} />
+      <NavBar eventRef={eventRef} menuRef={menuRef} navState={navState} navSetState={navSetState} navBarRef={navBarRef} />
 
-      <div style={{ opacity: navState ? 0.5 : 1}}>
+      <div style={{ opacity: navState ? 0.5 : 1 }}>
         <main className='flex flex-wrap justify-center items-center mt-[6em] mb-[6em]'>
           <div className='w-full md:w-1/2 flex flex-col justify-center items-center'>
             <h1 className='text-4xl font-bold text-center'>Benvenuti al <u>Rody Bar!</u></h1>
@@ -70,7 +91,7 @@ export default function Page() {
         <div ref={menuRef}>
           <h2 className='text-5xl underline font-bold mb-[2em] text-center'>Il Nostro Menu:</h2>
 
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-[4em] mb-[5em] w-max mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-[4em] mb-[5em] w-max mx-auto'>
             <div className='flex text-black w-[300px] h-max justify-center items-center flex-col'>
               <Img src={caffe} alt="caffe" className='w-full h-[400px] rounded-2xl mb-[1.5em]' />
 
