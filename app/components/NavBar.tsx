@@ -75,7 +75,7 @@ export default function NavBar(props: NavBarProps) {
             </nav>
             <div ref={props.navBarRef} className='absolute top-0 left-0 h-screen w-1/2 bg-sideNav z-30 p-5 flex flex-col nav-comparsa' style={{ display: props.navState ? 'block' : 'none' }}>
                 <div className='flex justify-between'>
-                    <Img src="/logo.jpeg" alt="Logo" width={70} height={70} />
+                    <Img src="/Logo.jpeg" alt="Logo" width={70} height={70} />
                     <button className='border-2 border-white p-1 rounded-lg md:hidden' onClick={() => props.navSetState?.(prev => !prev)}>
                         <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
                     </button>

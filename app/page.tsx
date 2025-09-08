@@ -63,13 +63,13 @@ export default function Page() {
 
       <NavBar eventRef={eventRef} menuRef={menuRef} navState={navState} navSetState={navSetState} navBarRef={navBarRef} />
 
-      <div style={{ opacity: navState ? 0.5 : 1 }}>
-        <main className='flex flex-wrap justify-center items-center mt-[6em] mb-[6em]'>
+      <div className='mt-[6em]' style={{ opacity: navState ? 0.5 : 1 }}>
+        <main className='flex flex-wrap justify-center items-center mb-[6em]'>
           <div className='w-full md:w-1/2 flex flex-col justify-center items-center'>
             <h1 className='text-4xl font-bold text-center'>Benvenuti al <u>Rody Bar!</u></h1>
             <div className='w-1/2 text-center mt-5 flex flex-col justify-center items-center'>
               <p>Un luogo dove ogni sorriso vale più di mille brindisi. Qui non sei cliente, sei di casa.</p>
-              <button onClick={scrollToMenu} className='mt-5 px-4 py-3 bg-oliveGreen rounded-2xl text-white shadow flex items-center button-anim'>Scopri cosa abbiamo da offrire<Img src="/arrow.png" alt="freccia" width={24} height={24} /></button>
+              <button onClick={scrollToMenu} className='mt-5 px-4 py-3 bg-oliveGreen rounded-2xl text-white shadow flex items-center button-anim'>Scopri cosa abbiamo da offrire<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></button>
             </div>
           </div>
           <div className='w-full md:w-1/2 p-5 flex justify-center items-center'>
