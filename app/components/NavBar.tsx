@@ -48,7 +48,7 @@ export default function NavBar(props: NavBarProps) {
                 </button>
 
                 <div className='flex justify-between items-center w-full px-10 max-md:hidden'>
-                    <Img src="/logo.jpeg" alt="Logo" width={70} height={70} />
+                    <Img src="/Logo.jpeg" alt="Logo" width={70} height={70} />
                     <div className='flex items-center justify-center gap-[3em] text-xl'>
                         <div>
                             <h1 className="font-bold"><a href="/">Rody Bar</a></h1>
