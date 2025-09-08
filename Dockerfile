@@ -3,8 +3,13 @@ FROM node:24-alpine AS base
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json package-lock.json*
-RUN package-lock.json; then npm ci
+
+# Copia package.json sempre, package-lock.json solo se esiste
+COPY package.json ./
+COPY package-lock.json* ./
+
+# Usa npm ci se c'è il lockfile, altrimenti npm install
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -17,7 +22,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN package-lock.json; then npm run build
+RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
