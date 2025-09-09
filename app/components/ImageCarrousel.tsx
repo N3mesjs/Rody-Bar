@@ -3,12 +3,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-import img1 from '../public/image1.jpg'
-import img2 from '../public/image2.jpg'
-import img3 from '../public/image3.jpg'
-import img4 from '../public/image4.jpg'
-import img5 from '../public/image5.jpg'
-
 interface HomePageProps {
     imagesArray: any[];
 }
@@ -40,7 +34,7 @@ export default function HomePage(props: HomePageProps) {
 
             {imageArray.map((val, i) => (
                 <div key={i} className='imageCarrousel' style={{ transform: `translateX(-${imageIndex * 100}%)` }}>
-                    <Image src={val} alt="car image" fill />
+                    <Image className='image' src={val} alt="car image" fill />
                 </div>
             ))}
 

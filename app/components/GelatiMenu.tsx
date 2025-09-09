@@ -14,7 +14,7 @@ export default function IceCreamMenu(props: PropsTypes) {
       <div className="flex flex-col text-2xl">
         {/* Colonna immagini */}
         <div className="flex justify-center items-center gap-[1.5em] mb-10">
-          <Img src="/gelato.png" alt="gelati" width={300} height={300} />
+          <Img src="/gelato.png" alt="gelati" width={500} height={500} />
         </div>
 
         {/* Colonna menu */}
