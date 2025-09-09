@@ -3,26 +3,17 @@ import React from 'react';
 
 interface PropsTypes {
     breakRef: React.RefObject<null | HTMLDivElement>
-} 
+}
 
 export default function ColazioneMenu(props: PropsTypes) {
     return (
         <div ref={props.breakRef} className='bg-oliveGreen text-white p-[7em]'>
             <div className='colonne text-2xl'>
                 <div className='flex justify-center items-center flex-col gap-[1.5em]'>
-                    <div>
-                        <Img src="/caffe.png" alt="caffè" width={300} height={300} />
-                    </div>
-                    <div>
-                        <Img src="/smily-coffe.png" alt="caffe con faccina sorridente" width={300} height={300} />
-                    </div>
-
-                    <div>
-                        <Img src="/toast.png" alt="toast" width={300} height={400} />
-                    </div>
-                    <div>
-                        <Img src="/tagliere.png" alt="tagliere" width={300} height={300} />
-                    </div>
+                    <Img src="/caffe.png" alt="caffè" width={300} height={300} />
+                    <Img src="/smily-coffe.png" alt="caffe con faccina sorridente" width={300} height={300} />
+                    <Img src="/toast.png" alt="toast" width={300} height={400} />
+                    <Img src="/tagliere.png" alt="tagliere" width={300} height={300} />
                 </div>
                 <div className='flex flex-col justify-center gap-[1.5em]'>
                     <h2 className='text-4xl'>Caffetteria & Colazioni</h2>

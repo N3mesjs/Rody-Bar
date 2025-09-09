@@ -10,9 +10,7 @@ export default function BibiteMenu(props: PropsTypes) {
         <div ref={props.iceCreamRef} className='bg-background text-black p-[7em]'>
             <div className='colonne text-2xl'>
                 <div className='flex flex-col justify-center items-center gap-[1.5em]'>
-                    <div>
-                        <Img src="/gelato.png" alt="gelati" width={300} height={300} />
-                    </div>
+                    <Img src="/gelato.png" alt="gelati" width={300} height={300} />
                 </div>
                 <div className='flex flex-col justify-center gap-[1.5em]'>
                     <h2 className='text-4xl'>Gelati</h2>
