@@ -60,10 +60,6 @@ export default function Page() {
     };
   }, [navState]);
 
-  useEffect(() => {
-    console.log("navOpen has changed:", navState);
-  }, [navState]);
-
   return (
     <div className='bg-background min-h-screen' style={{ overflow: navState ? 'hidden' : '', height: navState ? '100vh' : '100%' }}>
 
