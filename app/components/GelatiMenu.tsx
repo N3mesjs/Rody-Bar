@@ -10,18 +10,18 @@ export default function IceCreamMenu(props: PropsTypes) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div ref={props.iceCreamRef} className="bg-background text-black p-[7em]">
-      <div className="colonne text-2xl">
+    <div ref={props.iceCreamRef} className="bg-background text-black md:p-[7em] max-md:p-[2em]">
+      <div className="flex flex-col text-2xl">
         {/* Colonna immagini */}
-        <div className="flex flex-col justify-center items-center gap-[1.5em]">
+        <div className="flex justify-center items-center gap-[1.5em] mb-10">
           <Img src="/gelato.png" alt="gelati" width={300} height={300} />
         </div>
 
         {/* Colonna menu */}
-        <div className="flex flex-col gap-[1.5em]">
+        <div className="flex flex-col justify-center items gap-[2em] lg:w-[950px] mx-auto">
           <button
             onClick={() => setOpen(!open)}
-            className="hover:bg-gray-200 rounded-xl px-[1em] py-[0.5em] flex justify-between items-center"
+            className="hover:bg-gray-200 active:bg-gray-200 rounded-xl px-[1em] py-[0.5em] flex justify-between items-center"
           >
             <h2 className="max-md:text-2xl text-4xl">Gelati</h2>
             <ArrowIcon open={open} />

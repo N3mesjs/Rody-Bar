@@ -118,3 +118,38 @@
 .sub-menu.show {
     grid-template-rows: 1fr;
 }
+
+/* ImageCarrousel */
+.container {
+    position: relative;
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    height: 900px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+@media (width <= 768px) {
+    .container {
+        height: 300px;
+    }
+}
+
+.imageCarrousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.bottoni {
+    position: absolute;
+    display: flex;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 1em;
+}

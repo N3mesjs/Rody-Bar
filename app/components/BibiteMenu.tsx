@@ -1,24 +1,30 @@
-import Img from "next/image";
 import React from "react";
 import {useState} from "react";
+
+import Beer from '../../public/hugo.png';
+import BiraMoretti from '../../public/bira-moretti.png';
+import Spritz from '../../public/spritz.png';
+
+import ImageCarrousel from './ImageCarrousel';
 
 interface PropsTypes {
   drinksRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export default function BibiteMenu(props: PropsTypes) {
+
+  const ImgArray: any = [Beer, BiraMoretti, Spritz];
+
   return (
-    <div ref={props.drinksRef} className="bg-oliveGreen text-white p-[7em]">
-      <div className="colonne text-2xl">
+    <div ref={props.drinksRef} className="bg-oliveGreen text-white md:p-[7em] max-md:p-[2em]">
+      <div className="flex flex-col text-2xl">
         {/* colonna immagini */}
-        <div className="flex flex-col justify-between items-center gap-[1.5em]">
-          <Img src="/beer.png" alt="birra" width={300} height={300} />
-          <Img src="/bira-moretti.png" alt="birra" width={300} height={300} />
-          <Img src="/spritz.png" alt="spritz" width={300} height={300} />
+        <div className="flex justify-between items-center gap-[1.5em] mb-10">
+          <ImageCarrousel imagesArray={ImgArray} />
         </div>
 
         {/* colonna menu */}
-        <div className="flex flex-col justify-center gap-[2em]">
+        <div className="flex flex-col justify-center items gap-[2em] lg:w-[950px] mx-auto">
           <h2 className="text-4xl">Bibite & Alcolici</h2>
           <hr />
 
@@ -117,7 +123,7 @@ function AccordionSection({ title, children }: Props) {
     <div className="flex flex-col gap-2">
       <button
         onClick={() => setOpen(!open)}
-        className="hover:bg-oliveGreenHover rounded-xl px-[1em] py-[0.5em] linea flex justify-between items-center"
+        className="hover:bg-oliveGreenHover active:bg-oliveGreenHover rounded-xl px-[1em] py-[0.5em] linea flex justify-between items-center"
       >
         <h3 className="text-2xl font-semibold text-start">{title}</h3>
         <ArrowIcon open={open} />

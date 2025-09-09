@@ -1,6 +1,13 @@
 "use client";
-import Img from "next/image";
+
 import React, { useState } from "react";
+
+import Caffe from '../../public/caffe.png';
+import SmilyCoffe from '../../public/smily-coffe.png';
+import Toast from '../../public/toast.png';
+import Tagliere from '../../public/tagliere.png';
+
+import ImageCarrousel from './ImageCarrousel';
 
 interface PropsTypes {
   breakRef: React.RefObject<HTMLDivElement | null>;
@@ -9,22 +16,21 @@ interface PropsTypes {
 export default function ColazioneMenu(props: PropsTypes) {
   const [open, setOpen] = useState(false);
 
+  const ImgArray: any[] = [Caffe, SmilyCoffe, Toast, Tagliere];
+
   return (
-    <div ref={props.breakRef} className="bg-oliveGreen text-white p-[7em]">
-      <div className="colonne text-2xl">
+    <div ref={props.breakRef} className="bg-oliveGreen text-white md:p-[7em] max-md:p-[2em]">
+      <div className="flex flex-col text-2xl">
         {/* Colonna immagini */}
-        <div className="flex flex-col justify-between items-center gap-[1.5em]">
-          <Img src="/caffe.png" alt="caffè" width={300} height={300} />
-          <Img src="/smily-coffe.png" alt="caffè con faccina sorridente" width={300} height={300} />
-          <Img src="/toast.png" alt="toast" width={300} height={400} />
-          <Img src="/tagliere.png" alt="tagliere" width={300} height={300} />
+        <div className="flex justify-between items-center gap-[1.5em] mb-10">
+          <ImageCarrousel imagesArray={ImgArray} />
         </div>
 
         {/* Colonna menu */}
-        <div className="flex flex-col gap-[1.5em]">
+        <div className="flex flex-col justify-center items gap-[2em] lg:w-[950px] mx-auto">
           <button
             onClick={() => setOpen(!open)}
-            className="hover:bg-oliveGreenHover rounded-xl px-[1em] py-[0.5em] flex justify-between items-center"
+            className="hover:bg-oliveGreenHover active:bg-oliveGreenHover rounded-xl px-[1em] py-[0.5em] flex justify-between items-center"
           >
             <h2 className="max-md:text-2xl text-4xl">Caffetteria & Colazioni</h2>
             <ArrowIcon open={open} />

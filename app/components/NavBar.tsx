@@ -86,7 +86,7 @@ export default function NavBar(props: NavBarProps) {
                             <button key={i} onClick={(e) => {
                                 e.stopPropagation();
                                 value.action();
-                            }} className='w-full text-start hover:bg-sideNavHover rounded-md p-2 text-2xl font-medium'>
+                            }} className='w-full text-start hover:bg-sideNavHover active:bg-sideNavHover rounded-md p-2 text-2xl font-medium'>
                                 {value.label}
                             </button>
                         )

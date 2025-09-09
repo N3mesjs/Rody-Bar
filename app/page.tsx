@@ -65,7 +65,7 @@ export default function Page() {
   }, [navState]);
 
   return (
-    <div className='bg-background min-h-screen' style={{ overflow: navState ? 'hidden' : 'scroll', height: navState ? '100vh' : '100%' }}>
+    <div className='bg-background min-h-screen' style={{ overflow: navState ? 'hidden' : '', height: navState ? '100vh' : '100%' }}>
 
       <NavBar eventRef={eventRef} menuRef={menuRef} navState={navState} navSetState={navSetState} navBarRef={navBarRef} />
 

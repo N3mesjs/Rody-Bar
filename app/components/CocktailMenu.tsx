@@ -2,27 +2,33 @@
 import Img from "next/image";
 import React, { useState } from "react";
 
+import ImageCarrousel from './ImageCarrousel';
+
+import Spritz from '../../public/spritz.png';
+import Hugo from '../../public/hugo.png'
+
 interface PropsTypes {
   cocktailRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export default function CocktailMenu(props: PropsTypes) {
   const [open, setOpen] = useState(false);
+  
+  const ImgArray: any[] = [Spritz, Hugo];
 
   return (
-    <div ref={props.cocktailRef} className="bg-background text-black p-[7em]">
-      <div className="colonne text-2xl">
+    <div ref={props.cocktailRef} className="bg-background text-black md:p-[7em] max-md:p-[2em]">
+      <div className="flex flex-col text-2xl">
         {/* Colonna immagini */}
-        <div className="flex flex-col justify-center items-center gap-[1.5em]">
-          <Img src="/spritz.png" alt="spritz" width={300} height={300} />
-          <Img src="/hugo.png" alt="cocktail verde" width={300} height={300} />
+        <div className="flex justify-center items-center gap-[1.5em] mb-10">
+          <ImageCarrousel imagesArray={ImgArray}/>
         </div>
 
         {/* Colonna menu */}
-        <div className="flex flex-col gap-[1.5em]">
+        <div className="flex flex-col justify-center items gap-[2em] lg:w-[950px] mx-auto">
           <button
             onClick={() => setOpen(!open)}
-            className="hover:bg-gray-200 rounded-xl px-[1em] py-[0.5em] flex justify-between items-center"
+            className="hover:bg-gray-200 active:bg-gray-200 rounded-xl px-[1em] py-[0.5em] flex justify-between items-center"
           >
             <h2 className="max-md:text-2xl text-4xl">Cocktail</h2>
             <ArrowIcon open={open} />
