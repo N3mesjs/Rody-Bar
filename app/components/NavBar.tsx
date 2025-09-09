@@ -38,7 +38,7 @@ export default function NavBar(props: NavBarProps) {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 w-full flex items-center p-5 text-white bg-giallo z-20">
+            <nav className="sticky top-0 left-0 w-full flex items-center p-5 text-white bg-giallo z-20">
 
                 <button className='border-2 p-1 rounded-lg md:hidden' onClick={(e) => {
                     e.stopPropagation();
