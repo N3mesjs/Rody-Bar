@@ -108,7 +108,7 @@ export default function Page() {
 
           <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-[4em] mb-[5em] w-max mx-auto'>
             <div className='flex text-black w-[300px] h-max justify-center items-center flex-col'>
-              <Img src={caffe} alt="caffe" className='w-full h-[400px] rounded-2xl mb-[1.5em]' />
+              <Img src={caffe} alt="caffe" className='w-full h-[400px] rounded-2xl mb-[1.5em] object-cover' />
 
               {/* Colazione */}
               <button onClick={scrollToBreakFast} className='text-center font-bold text-2xl mt-2 bg-oliveGreen active:bg-[#374641] py-[7px] px-[15px] rounded-2xl shadow button-anim w-full text-white'>Colazione</button>
@@ -116,18 +116,18 @@ export default function Page() {
 
             {/* Cocktails */}
             <div className='flex text-black w-[300px] h-max justify-center items-center flex-col'>
-              <Img src={spritz} alt="cocktails" className='w-full h-[400px] rounded-2xl mb-[1.5em]' />
+              <Img src={spritz} alt="cocktails" className='w-full h-[400px] rounded-2xl mb-[1.5em] object-cover' />
               <button onClick={scrollToCockTails} className='text-center font-bold text-2xl mt-2 bg-giallo active:bg-[#a18912] py-[7px] px-[15px] rounded-2xl shadow button-anim w-full text-white'>Cocktails</button>
             </div>
 
             {/* Bibite */}
             <div className='flex text-black w-[300px] h-max justify-center items-center flex-col'>
-              <Img src={bibite} alt="bibite" className='w-full h-[400px] rounded-2xl mb-[1.5em]' />
+              <Img src={bibite} alt="bibite" className='w-full h-[400px] rounded-2xl mb-[1.5em] object-cover' />
               <button onClick={scrollToDrinks} className='text-center font-bold text-2xl mt-2 bg-[#5D688A] active:bg-[#353b4d]  py-[7px] px-[15px] rounded-2xl shadow button-anim w-full text-white'>Bibite</button>
             </div>
 
             {/* Gelati */}
-            <div className='flex text-black w-[300px] h-max justify-center items-center flex-col'>
+            <div className='flex text-black w-[300px] h-max justify-center items-center flex-col object-cover'>
               <Img src={gelato} alt="gelato" className='w-full h-[400px] rounded-2xl mb-[1.5em]' />
               <button onClick={scrollToIceCreams} className='text-center font-bold text-2xl mt-2 bg-sideNav active:bg-[#51450e] py-[7px] px-[15px] rounded-2xl shadow button-anim w-full text-white'>Gelati</button>
             </div>
